@@ -447,3 +447,8 @@ footer {
     border-radius: 8px;
 }
 
+.lista-servicios {
+    list-style: none; /* Elimina los puntos */
+    padding: 0; /* Elimina el padding predeterminado */
+    margin: 0; /* Asegura que no haya márgenes extra */
+}
