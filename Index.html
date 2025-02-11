@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi Móvil - Servicio Privado</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Menú de Navegación -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección de Inicio -->
+    <header id="inicio" data-aos="fade-down">
+        <h1 class="titulo-principal">🚖 Taxi Móvil 🚖</h1>
+        <img src="img/coche.png" alt="Toyota RAV4 en movimiento" class="imagen-don-ivan">
+        <p>Su conductor de confianza para un viaje seguro, cómodo y puntual.</p>
+        <a href="https://wa.me/13054407563?text=Hola,%20favor%20necesito%20vuestro%20servicio%20de%20taxi%20móvil" target="_blank" class="boton" data-aos="zoom-in">Reserva tu viaje</a>
+    </header>
+    
+    <!-- Sección de Servicios -->
+    <section id="servicios" data-aos="fade-up">
+        <h2>Servicios</h2>
+        <ul class="lista-servicios">
+            <li><i class="fas fa-car"></i> Viajes Privados</li>
+            <li><i class="fas fa-plane"></i> Traslados al Aeropuerto</li>
+            <li><i class="fas fa-route"></i> Viajes Puerta a Puerta Fuera de la Ciudad</li>
+            <li><i class="fas fa-box"></i> Entregas Rápidas y Seguras</li>
+        </ul>
+    </section>
+
+    <!-- Sección de Testimonios -->
+    <section id="testimonios" data-aos="fade-left">
+        <h2>Lo que dicen nuestros clientes</h2>
+        <blockquote>"¡Excelente servicio! Siempre puntual y amable." - Cliente feliz 😊</blockquote>
+        <blockquote>"Viaje seguro y confiable, 100% recomendado." - María T.</blockquote>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <footer id="contacto" data-aos="fade-up">
+        <h2>Contacto</h2>
+        <p>📧 Correo: <a href="mailto:Ivansm68@icloud.com">Ivansm68@icloud.com</a></p>
+        <p>📱 WhatsApp: <a href="https://wa.me/13054407563?text=Hola,%20favor%20necesito%20vuestro%20servicio%20de%20taxi%20móvil">Enviar mensaje</a></p>
+    </footer>
+
+    <!-- Sección de Mapa -->
+    <section id="mapa" data-aos="fade-up">
+        <h2>Zona de Servicio</h2>
+        <div class="mapa-contenedor">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14579.654707317295!2d-80.1917902!3d25.7616798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b69a9f1b5a8d%3A0x1d6e03fda2a4189!2sMiami%2C%20FL!5e0!3m2!1sen!2sus!4v1710101234567!5m2!1sen!2sus"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Sección QR -->
+    <section id="qr-whatsapp" data-aos="fade-up">
+        <h2>Escanea o toca para contactarnos en WhatsApp</h2>
+        <a href="https://wa.me/13054407563?text=Hola,%20favor%20necesito%20vuestro%20servicio%20de%20taxi%20móvil" target="_blank">
+            <img src="img/qrivan.png" alt="QR WhatsApp Taxi Móvil" class="qr-dinamico">
+        </a>
+    </section>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/13054407563?text=Hola,%20favor%20necesito%20vuestro%20servicio%20de%20taxi%20móvil" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts de animaciones y lógica -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+
+</body>
+</html>
