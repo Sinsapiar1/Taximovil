@@ -13,13 +13,17 @@
 
     <!-- Menú de Navegación -->
     <nav>
-        <ul>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </div>
+        <ul id="nav-menu">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="#testimonios">Testimonios</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
+    
 
     <!-- Sección de Inicio -->
     <header id="inicio" data-aos="fade-down">
@@ -86,6 +90,24 @@
             once: true,
         });
     </script>
-
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("nav-menu");
+    
+        if (menu.classList.contains("active")) {
+            menu.classList.remove("active");
+            menu.classList.add("closing");
+    
+            // Espera a que termine la animación antes de quitar la clase "closing"
+            setTimeout(() => {
+                menu.classList.remove("closing");
+            }, 500);
+        } else {
+            menu.classList.add("active");
+        }
+    }
+    </script>
+    
+    
 </body>
 </html>
