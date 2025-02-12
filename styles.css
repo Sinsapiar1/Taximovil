@@ -23,436 +23,13 @@ body {
     color: #FFD700;
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
     margin-bottom: 15px;
+    transition: text-shadow 0.5s ease-in-out;
+}
+.titulo-principal:hover {
+    text-shadow: 0px 0px 15px white, 0px 0px 30px silver;
 }
 
 /* MENÚ DE NAVEGACIÓN */
-nav {
-    background: linear-gradient(90deg, #1E3A5F, #1B2945);
-    padding: 15px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-}
-
-nav ul li a:hover {
-    color: #FFD700;
-}
-
-/* ENCABEZADO */
-header {
-    background: url('img/taxi.jpg') no-repeat center center/cover;
-    color: white;
-    padding: 100px 20px;
-    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
-    margin-top: 50px;
-}
-
-header h1 {
-    font-size: 3em;
-    font-weight: bold;
-    color: #FFD700;
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
-    animation: fadeInDown 1.5s ease-in-out;
-}
-
-/* BOTÓN PRINCIPAL */
-.boton {
-    background-color: #FFD700;
-    color: black;
-    padding: 15px 25px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 15px;
-    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
-}
-
-.boton:hover {
-    background-color: #E6B800;
-    transform: scale(1.05);
-}
-
-/* ESTILO BASE PARA LAS SECCIONES */
-section {
-    padding: 40px 20px;
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparente */
-    backdrop-filter: blur(10px);
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    max-width: 900px;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-/* ANIMACIÓN DE APARICIÓN */
-section.aparecer {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* PIE DE PÁGINA */
-footer {
-    background: linear-gradient(90deg, #1E3A5F, #1B2945);
-    color: white;
-    padding: 20px;
-}
-
-/* IMAGEN PRINCIPAL */
-.imagen-don-ivan {
-    width: 250px;
-    height: auto;
-    border-radius: 50%;
-    display: block;
-    margin: 10px auto;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
-}
-
-.imagen-don-ivan:hover {
-    transform: scale(1.1);
-}
-
-/* ESTILO PARA EL QR */
-#qr-whatsapp {
-    text-align: center;
-    margin: 40px auto;
-    max-width: 400px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
-}
-
-/* QR DINÁMICO */
-.qr-dinamico {
-    width: 220px;
-    height: auto;
-    display: block;
-    margin: 15px auto;
-    transition: transform 0.3s ease-in-out;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.qr-dinamico:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.3);
-}
-
-/* BOTÓN FLOTANTE DE WHATSAPP */
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    font-size: 2rem;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.1);
-}
-
-/* MAPA */
-.mapa-contenedor {
-    text-align: center;
-    margin: 20px auto;
-    max-width: 600px;
-}
-
-/* Mejorar visibilidad de enlaces en Contacto */
-footer a {
-    color: #FFD700; /* Amarillo dorado para mayor contraste */
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
-}
-
-footer a:hover {
-    color: #ffffff; /* Blanco brillante al pasar el mouse */
-    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
-    text-decoration: underline;
-}
-
-/* Mejorar íconos en Contacto */
-footer p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-size: 1.1em;
-}
-
-/* Ajuste de color en el fondo del footer */
-footer {
-    background: linear-gradient(90deg, #002855, #003f7f);
-    padding: 20px;
-    border-radius: 8px;
-}
-/* Estilos Generales */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background: linear-gradient(-45deg, #2a2a2a, #3c3c3c, #555, #777);
-    background-size: 400% 400%;
-    animation: animacionFondo 10s infinite alternate ease-in-out;
-    color: #f5f5f5;
-}
-
-/* ANIMACIÓN DE FONDO */
-@keyframes animacionFondo {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
-}
-
-/* TITULO PRINCIPAL */
-.titulo-principal {
-    font-family: 'Lobster', cursive;
-    font-size: 3.5em;
-    color: #FFD700;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
-    margin-bottom: 15px;
-}
-
-/* MENÚ DE NAVEGACIÓN */
-nav {
-    background: linear-gradient(90deg, #1E3A5F, #1B2945);
-    padding: 15px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-}
-
-nav ul li a:hover {
-    color: #FFD700;
-}
-
-/* ENCABEZADO */
-header {
-    background: url('img/taxi.jpg') no-repeat center center/cover;
-    color: white;
-    padding: 100px 20px;
-    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
-    margin-top: 50px;
-}
-
-header h1 {
-    font-size: 3em;
-    font-weight: bold;
-    color: #FFD700;
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
-    animation: fadeInDown 1.5s ease-in-out;
-}
-
-/* BOTÓN PRINCIPAL */
-.boton {
-    background-color: #FFD700;
-    color: black;
-    padding: 15px 25px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 15px;
-    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
-}
-
-.boton:hover {
-    background-color: #E6B800;
-    transform: scale(1.05);
-}
-
-/* ESTILO BASE PARA LAS SECCIONES */
-section {
-    padding: 40px 20px;
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparente */
-    backdrop-filter: blur(10px);
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    max-width: 900px;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-/* ANIMACIÓN DE APARICIÓN */
-section.aparecer {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* PIE DE PÁGINA */
-footer {
-    background: linear-gradient(90deg, #1E3A5F, #1B2945);
-    color: white;
-    padding: 20px;
-}
-
-/* IMAGEN PRINCIPAL */
-.imagen-don-ivan {
-    width: 250px;
-    height: auto;
-    border-radius: 50%;
-    display: block;
-    margin: 10px auto;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
-}
-
-.imagen-don-ivan:hover {
-    transform: scale(1.1);
-}
-
-/* ESTILO PARA EL QR */
-#qr-whatsapp {
-    text-align: center;
-    margin: 40px auto;
-    max-width: 400px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
-}
-
-/* QR DINÁMICO */
-.qr-dinamico {
-    width: 220px;
-    height: auto;
-    display: block;
-    margin: 15px auto;
-    transition: transform 0.3s ease-in-out;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.qr-dinamico:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.3);
-}
-
-/* BOTÓN FLOTANTE DE WHATSAPP */
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    font-size: 2rem;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.1);
-}
-
-/* MAPA */
-.mapa-contenedor {
-    text-align: center;
-    margin: 20px auto;
-    max-width: 600px;
-}
-
-/* Mejorar visibilidad de enlaces en Contacto */
-footer a {
-    color: #FFD700; /* Amarillo dorado para mayor contraste */
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
-}
-
-footer a:hover {
-    color: #ffffff; /* Blanco brillante al pasar el mouse */
-    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
-    text-decoration: underline;
-}
-
-/* Mejorar íconos en Contacto */
-footer p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-size: 1.1em;
-}
-
-/* Ajuste de color en el fondo del footer */
-footer {
-    background: linear-gradient(90deg, #002855, #003f7f);
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.lista-servicios {
-    list-style: none; /* Elimina los puntos */
-    padding: 0; /* Elimina el padding predeterminado */
-    margin: 0; /* Asegura que no haya márgenes extra */
-}
-/* Menú base */
 nav {
     background: linear-gradient(90deg, #1E3A5F, #1B2945);
     padding: 15px;
@@ -466,15 +43,52 @@ nav {
     align-items: center;
 }
 
+nav ul li a:hover {
+    color: #FFD700;
+    text-shadow: 0px 0px 15px white, 0px 0px 30px silver;
+}
+
 /* Icono de menú hamburguesa */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+}
+
+/* Estilos para el menú en pantallas grandes */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+/* MENÚ HAMBURGUESA SOLO EN MÓVILES */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
-        cursor: pointer;
     }
 
     nav ul {
-        display: flex;
         flex-direction: column;
         background: linear-gradient(90deg, #1E3A5F, #14213D);
         position: absolute;
@@ -483,22 +97,18 @@ nav {
         left: 0;
         padding: 10px 0;
         text-align: center;
-
-        /* Oculto por defecto */
         opacity: 0;
         transform: translateY(-20px);
         transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s;
-        visibility: hidden; /* Evita que ocupe espacio cuando está oculto */
+        visibility: hidden;
     }
 
-    /* Cuando el menú está activo */
     nav ul.active {
         opacity: 1;
         transform: translateY(0);
         visibility: visible;
     }
 
-    /* Animación de cierre */
     nav ul.closing {
         opacity: 0;
         transform: translateY(-20px);
@@ -508,15 +118,143 @@ nav {
     nav ul li {
         padding: 12px 0;
     }
+}
 
-    nav ul li a {
-        font-size: 18px;
-        color: #FFD700;
-        transition: color 0.3s ease-in-out;
-    }
+/* ENCABEZADO CON IMAGEN DE FONDO */
+header {
+    background: url('img/taxi.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 20px;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
+    margin-top: 50px;
+}
 
-    nav ul li a:hover {
-        color: #F5A623;
-        text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8);
-    }
+/* BOTÓN PRINCIPAL */
+.boton {
+    background-color: #FFD700;
+    color: black;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 15px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.boton:hover {
+    background-color: #E6B800;
+    transform: scale(1.05);
+}
+
+/* ESTILO BASE PARA LAS SECCIONES */
+section {
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 900px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* ANIMACIÓN DE APARICIÓN */
+section.aparecer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background: linear-gradient(90deg, #002855, #003f7f);
+    color: white;
+    padding: 20px;
+}
+
+/* IMAGEN PRINCIPAL */
+.imagen-don-ivan {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.imagen-don-ivan:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px white, 0px 0px 30px silver;
+}
+
+/* BOTÓN FLOTANTE DE WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* MAPA */
+.mapa-contenedor {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* LISTA DE SERVICIOS */
+.lista-servicios {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* QR DINÁMICO */
+.qr-dinamico {
+    width: 220px;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.qr-dinamico:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px white, 0px 0px 30px silver;
+}
+
+/* SECCIÓN DE CONTACTO */
+footer a {
+    color: #FFD700;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+footer a:hover {
+    color: white;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+    text-decoration: underline;
+}
+
+footer {
+    background: linear-gradient(90deg, #002855, #003f7f);
+    padding: 20px;
+    border-radius: 8px;
 }
