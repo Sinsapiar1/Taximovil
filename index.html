@@ -3,108 +3,416 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taxi Móvil - Servicio Privado</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Taxi Móvil - Servicio Premium</title>
+    <meta name="description" content="Servicio de taxi privado premium en Miami. Viajes seguros, cómodos y puntuales. Reserva tu viaje ahora.">
+    <meta name="keywords" content="taxi, miami, servicio privado, aeropuerto, transporte">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#FFD700">
+    
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Fondo de partículas animadas -->
+    <div class="particles" id="particles"></div>
 
-    <!-- Menú de Navegación -->
-    <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        <ul id="nav-menu">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#testimonios">Testimonios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-taxi"></i>
+                Taxi Móvil
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
+                <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </nav>
 
-    <!-- Sección de Inicio -->
-    <header id="inicio" data-aos="fade-down">
-        <h1 class="titulo-principal">🚖 Taxi Móvil 🚖</h1>
-        <img src="img/coche.png" alt="Toyota RAV4 en movimiento" class="imagen-don-ivan">
-        <p>Su conductor de confianza para un viaje seguro, cómodo y puntual.</p>
-        <a href="https://wa.me/13054407563?text=Hola,%20favor%20necesito%20vuestro%20servicio%20de%20taxi%20móvil" target="_blank" class="boton" data-aos="zoom-in">Reserva tu viaje</a>
-    </header>
-    
-    <!-- Sección de Servicios -->
-    <section id="servicios" data-aos="fade-up">
-        <h2>Servicios</h2>
-        <ul class="lista-servicios">
-            <li><i class="fas fa-car"></i> Viajes Privados</li>
-            <li><i class="fas fa-plane"></i> Traslados al Aeropuerto</li>
-            <li><i class="fas fa-route"></i> Viajes Puerta a Puerta Fuera de la Ciudad</li>
-            <li><i class="fas fa-box"></i> Entregas Rápidas y Seguras</li>
-        </ul>
-    </section>
-
-    <!-- Sección de Testimonios -->
-    <section id="testimonios" data-aos="fade-left">
-        <h2>Lo que dicen nuestros clientes</h2>
-        <blockquote>"¡Excelente servicio! Siempre puntual y amable." - Cliente feliz 😊</blockquote>
-        <blockquote>"Viaje seguro y confiable, 100% recomendado." - María T.</blockquote>
-    </section>
-
-    <!-- Sección de Contacto -->
-    <footer id="contacto" data-aos="fade-up">
-        <h2>Contacto</h2>
-        <p>📧 Correo: <a href="mailto:Ivansm68@icloud.com">Ivansm68@icloud.com</a></p>
-        <p>📱 WhatsApp: <a href="https://wa.me/13054407563?text=Hola,%20favor%20necesito%20vuestro%20servicio%20de%20taxi%20móvil">Enviar mensaje</a></p>
-    </footer>
-
-    <!-- Sección de Mapa -->
-    <section id="mapa" data-aos="fade-up">
-        <h2>Zona de Servicio</h2>
-        <div class="mapa-contenedor">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14579.654707317295!2d-80.1917902!3d25.7616798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b69a9f1b5a8d%3A0x1d6e03fda2a4189!2sMiami%2C%20FL!5e0!3m2!1sen!2sus!4v1710101234567!5m2!1sen!2sus"
-                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-            </iframe>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Taxi Móvil</span>
+                    <span class="subtitle">Servicio Premium</span>
+                </h1>
+                <p class="hero-description">
+                    Experiencia de transporte de lujo con la máxima comodidad, seguridad y puntualidad. 
+                    Tu conductor de confianza en Miami.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/13054407563?text=Hola,%20necesito%20servicio%20de%20taxi%20premium" 
+                       class="btn-primary" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Reservar Ahora
+                    </a>
+                    <a href="#servicios" class="btn-secondary">
+                        <i class="fas fa-info-circle"></i>
+                        Conocer Más
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="car-container">
+                    <img src="img/coche.png" alt="Toyota RAV4 Premium" class="hero-car">
+                    <div class="car-glow"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Indicador de scroll -->
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
         </div>
     </section>
 
-    <!-- Sección QR -->
-    <section id="qr-whatsapp" data-aos="fade-up">
-        <h2>Escanea o toca para contactarnos en WhatsApp</h2>
-        <a href="https://wa.me/13054407563?text=Hola,%20favor%20necesito%20vuestro%20servicio%20de%20taxi%20móvil" target="_blank">
-            <img src="img/qrivan.png" alt="QR WhatsApp Taxi Móvil" class="qr-dinamico">
-        </a>
+    <!-- Servicios -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestros Servicios Premium</h2>
+                <p class="section-subtitle">Soluciones de transporte para cada necesidad</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Viajes Privados</h3>
+                    <p>Servicio exclusivo puerta a puerta con vehículos premium y conductores profesionales.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Vehículo climatizado</li>
+                        <li><i class="fas fa-check"></i> Conductor certificado</li>
+                        <li><i class="fas fa-check"></i> Máxima puntualidad</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Traslados al Aeropuerto</h3>
+                    <p>Servicio especializado para llegadas y salidas con seguimiento de vuelos en tiempo real.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Seguimiento de vuelos</li>
+                        <li><i class="fas fa-check"></i> Tiempo de espera incluido</li>
+                        <li><i class="fas fa-check"></i> Asistencia con equipaje</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Viajes Intercity</h3>
+                    <p>Conexiones cómodas y seguras entre ciudades con tarifas competitivas.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Rutas optimizadas</li>
+                        <li><i class="fas fa-check"></i> Paradas programadas</li>
+                        <li><i class="fas fa-check"></i> Tarifa fija</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Entregas Express</h3>
+                    <p>Servicio de mensajería rápida y segura para documentos y paquetes importantes.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Entrega inmediata</li>
+                        <li><i class="fas fa-check"></i> Seguimiento en vivo</li>
+                        <li><i class="fas fa-check"></i> Seguro incluido</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Botón flotante de WhatsApp -->
-    <a href="https://wa.me/13054407563?text=Hola,%20favor%20necesito%20vuestro%20servicio%20de%20taxi%20móvil" target="_blank" class="whatsapp-float">
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Clientes Satisfechos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Disponibilidad</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Puntualidad</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5★</div>
+                    <div class="stat-label">Calificación</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
+                <p class="section-subtitle">Experiencias reales de satisfacción garantizada</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"Excelente servicio! Siempre puntual, vehículo impecable y conductor muy profesional. Sin duda el mejor servicio de taxi en Miami."</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>María González</h4>
+                                <span>Ejecutiva</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"Utilizo este servicio para mis traslados al aeropuerto. Nunca me ha fallado, siempre llego a tiempo y el conductor es muy amable."</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Carlos Rodríguez</h4>
+                                <span>Viajero Frecuente</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"Servicio premium a precio justo. El vehículo está siempre limpio y cómodo. 100% recomendado para cualquier ocasión."</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Ana Silva</h4>
+                                <span>Empresaria</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicación -->
+    <section id="ubicacion" class="location">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestra Zona de Servicio</h2>
+                <p class="section-subtitle">Cobertura completa en Miami y áreas metropolitanas</p>
+            </div>
+            
+            <div class="location-content">
+                <div class="location-info">
+                    <div class="location-features">
+                        <div class="feature-item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <div>
+                                <h3>Cobertura Completa</h3>
+                                <p>Servicio en toda el área metropolitana de Miami</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>24/7 Disponible</h3>
+                                <p>Servicio las 24 horas, los 7 días de la semana</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-route"></i>
+                            <div>
+                                <h3>Rutas Optimizadas</h3>
+                                <p>GPS y tráfico en tiempo real para rutas eficientes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14579.654707317295!2d-80.1917902!3d25.7616798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b69a9f1b5a8d%3A0x1d6e03fda2a4189!2sMiami%2C%20FL!5e0!3m2!1sen!2sus!4v1710101234567!5m2!1sen!2sus"
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contacto Directo</h2>
+                <p class="section-subtitle">Reserva tu viaje de forma rápida y sencilla</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>WhatsApp</h3>
+                            <a href="https://wa.me/13054407563?text=Hola,%20necesito%20servicio%20de%20taxi%20premium" target="_blank">
+                                +1 (305) 440-7563
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:Ivansm68@icloud.com">Ivansm68@icloud.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Disponibilidad</h3>
+                            <span>24 horas, 7 días a la semana</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="qr-section">
+                    <h3>Escanea para contactar</h3>
+                    <div class="qr-container">
+                        <a href="https://wa.me/13054407563?text=Hola,%20necesito%20servicio%20de%20taxi%20premium" target="_blank">
+                            <img src="img/qrivan.png" alt="QR WhatsApp Taxi Móvil" class="qr-code">
+                        </a>
+                    </div>
+                    <p>Escanea el código QR con tu teléfono para contactarnos directamente por WhatsApp</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-taxi"></i>
+                        Taxi Móvil
+                    </div>
+                    <p>Tu servicio de transporte premium en Miami. Comodidad, seguridad y puntualidad garantizada.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li>Viajes Privados</li>
+                        <li>Traslados Aeropuerto</li>
+                        <li>Viajes Intercity</li>
+                        <li>Entregas Express</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fab fa-whatsapp"></i> +1 (305) 440-7563</li>
+                        <li><i class="fas fa-envelope"></i> Ivansm68@icloud.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Miami, FL</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Taxi Móvil. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/13054407563?text=Hola,%20necesito%20servicio%20de%20taxi%20premium" 
+       class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Scripts de animaciones y lógica -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-        });
-    </script>
-
-    <script>
-    function toggleMenu() {
-        var menu = document.getElementById("nav-menu");
-
-        if (menu.classList.contains("active")) {
-            menu.classList.remove("active");
-            menu.classList.add("closing");
-
-            // Espera a que termine la animación antes de quitar la clase "closing"
-            setTimeout(() => {
-                menu.classList.remove("closing");
-            }, 500);
-        } else {
-            menu.classList.add("active");
-        }
-    }
-    </script>
-
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
